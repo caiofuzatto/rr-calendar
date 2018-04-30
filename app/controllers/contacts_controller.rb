@@ -15,10 +15,16 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   def new
     @contact = Contact.new
+    options_for_select
   end
 
   # GET /contacts/1/edit
   def edit
+    options_for_select
+  end
+
+  def options_for_select
+    @kind_options_for_select = Kind.all
   end
 
   # POST /contacts
