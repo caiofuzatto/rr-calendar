@@ -1,35 +1,46 @@
 "pt-BR":
-    activerecord:
-      models:
-        contact: 
-          one: "Contato"
-          other: "Contatos"
-        address:
-          one: "Endereço"
-          other: "Endereços"
-        phone:
-          one: "Telefone"
-          other: "Telefones"
-      attributes:
-        contact: 
-          nome: "Nome"
-          email: "Email"
-          kind: "Tipo de Contato"
-          kind_id: "Tipo de Contato"
-          rmk: "Obs"
-        address:
-          street: "Rua"
-          city: "Cidade"
-          state: "Estado"
-          contact_id: "Contato"
-          contact: "Contato"
-        phone:
-          phone: "Telefone"
-    buttons:
-      show: "Mostrar"
-      edit: "Editar"
-      destroy: "Excluir"
-      new: "Novo"
-    messages:
-      confirm: "Tem certeza?"
-      listing: "Listando"
+  activerecord:
+    models:
+      contact: 
+        one: "Contato"
+        other: "Contatos"
+      kind: 
+        one: "Tipo"
+        other: "Tipos"
+      address:
+        one: "Endereço"
+        other: "Endereços"
+      phone:
+        one: "Telefone"
+        other: "Telefones"
+    attributes:
+      contact: 
+        nome: "Nome"
+        email: "Email"
+        kind: "Tipo de Contato"
+        kind_id: "Tipo de Contato"
+        rmk: "Obs"
+      kind:
+        description: "Descrição"
+      address:
+        street: "Rua"
+        city: "Cidade"
+        state: "Estado"
+        contact_id: "Contato"
+        contact: "Contato"
+      phone:
+        phone: "Telefone"
+  buttons:
+    show: "Mostrar"
+    edit: "Editar"
+    submit: "Enviar"
+    destroy: "Excluir"
+    new: "Novo"
+    back: "Voltar"
+  messages:
+    confirm: "Tem certeza?"
+    listing: "Listando"
+    errors: "Não foi possivel completar a ação"
+    created: "Criado com sucesso!"
+    updated: "Atualizado com sucesso!"
+    destroyed: "Excluído com sucesso!"

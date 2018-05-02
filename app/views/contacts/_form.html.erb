@@ -1,7 +1,7 @@
 <%= form_for(@contact, html: {class: "dark-matter"}) do |f| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
+      <h2><%= t('messages.errors') %></h2>
 
       <ul>
       <% @contact.errors.full_messages.each do |message| %>
@@ -42,10 +42,10 @@
   <% end %> 
 
   <div id="phones">
-  <%= f.fields_for :phones do |phones_fields| %>
-    <%= render partial: "phone_fields", locals: {f: phones_fields} %>
-  <% end %>
-  <%= link_to_add_association('[Adicionar]', f, :phones) %>
+    <%= f.fields_for :phones do |phones_fields| %>
+      <%= render partial: "phone_fields", locals: {f: phones_fields} %>
+    <% end %>
+    <%= link_to_add_association('[Adicionar]', f, :phones) %>
   </div> 
 
   <div class="field">
@@ -53,7 +53,7 @@
     <%= f.text_area :rmk %>
   </div>
   <div class="actions">
-    <%= f.submit "Enviar", class: "button" %>
-    <%= link_to 'Back', contacts_path, class: "button" %>
+    <%= f.submit t('buttons.submit'), class: "btn btn-success" %>
+    <%= link_to t('buttons.back'), contacts_path, class: "btn btn-danger" %>
   </div>
 <% end %>
